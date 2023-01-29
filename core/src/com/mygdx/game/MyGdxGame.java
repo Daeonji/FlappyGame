@@ -36,8 +36,8 @@ public class MyGdxGame extends ApplicationAdapter {
 	
 	@Override
 	public void create () {
-		dropImage = new Texture(Gdx.files.internal("watersprite.png"));
-		bucketImage = new Texture(Gdx.files.internal("bucket.png"));
+		dropImage = new Texture(Gdx.files.internal("pipe.png"));
+		bucketImage = new Texture(Gdx.files.internal("flappy.png"));
 		camera = new OrthographicCamera();
 		camera.setToOrtho(false,800,480);
 		batch = new SpriteBatch();
@@ -71,9 +71,6 @@ public class MyGdxGame extends ApplicationAdapter {
 				Vector3 touchPos = new Vector3();
 				touchPos.set(Gdx.input.getX(), Gdx.input.getY(), 0);
 				camera.unproject(touchPos);
-				//bucket.y = touchPos.y - 64 / 2;
-				//bucket.y += 200 * Gdx.graphics.getDeltaTime();
-				//camera.unproject(touch)
 			}
 
 			if(Gdx.input.isKeyJustPressed(Input.Keys.SPACE))
